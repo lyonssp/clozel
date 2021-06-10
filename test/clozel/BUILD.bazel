@@ -10,3 +10,12 @@ clojure_library(name = "db_test",
 clojure_test(name = "db_test.test",
 	test_ns = "db.test",
 	deps = ["db_test"])
+
+clojure_library(name = "resource_test",
+	srcs = {"resource_test.clj" : "/resource/test.clj"},
+	deps = ["@deps//:org_clojure_clojure","//resources","@deps//:ns_org_clojure_clojure_clojure_test","@deps//:ns_org_clojure_clojure_clojure_edn"],
+	aot = ["resource.test"])
+
+clojure_test(name = "resource_test.test",
+	test_ns = "resource.test",
+	deps = ["resource_test"])

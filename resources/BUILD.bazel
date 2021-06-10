@@ -2,4 +2,4 @@
 package(default_visibility = ["//visibility:public"])
 load("@rules_clojure//:rules.bzl", "clojure_library")
 clojure_library(name = "resources",
-	srcs = {"//resources:conf.edn" : "/conf.edn"})
+	srcs = {"//resources:BUILD.bazel" : "/BUILD.bazel","//resources:data.edn" : "/data.edn"})
