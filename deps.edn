@@ -3,7 +3,7 @@
  :deps {seancorfield/next.jdbc {:mvn/version "1.0.476"},
         org.xerial/sqlite-jdbc {:mvn/version "3.32.3"}}
 
- :bazel {:extra-deps {"//src/clozel" {:deps "@deps://org_xerial_sqlite_jdbc"}}}
+ :bazel {:extra-deps {"//src/clozel:db" {:deps ["@deps://org_xerial_sqlite_jdbc"]}}}
 
  :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
              "clojars" {:url "https://clojars.org/repo"}}}

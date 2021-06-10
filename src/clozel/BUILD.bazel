@@ -4,5 +4,5 @@ load("@rules_clojure//:rules.bzl", "clojure_library", "clojure_test")
 
 clojure_library(name = "db",
 	srcs = {"db.clj" : "/clozel/db.clj"},
-	deps = ["@deps//:org_clojure_clojure","//resources","@deps//:ns_seancorfield_next_jdbc_next_jdbc","@deps//:ns_seancorfield_next_jdbc_next_jdbc_sql"],
+	deps = ["@deps//:org_clojure_clojure","//resources","@deps//:ns_seancorfield_next_jdbc_next_jdbc","@deps//:ns_seancorfield_next_jdbc_next_jdbc_sql","@deps://org_xerial_sqlite_jdbc"],
 	aot = ["clozel.db"])
